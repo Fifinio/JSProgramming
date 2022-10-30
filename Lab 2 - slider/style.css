@@ -34,7 +34,31 @@ body {
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
+  transition: outline 0.05s;
 }
+.carousel-container:hover {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+.indexButtons {
+  position: absolute;
+  bottom: 1rem;
+  width: 600px;
+  display: flex;
+  z-index: 2;
+  justify-content: space-evenly;
+}
+.indexButtons > .idx-btn {
+  width: 1rem;
+  height: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+}
+.indexButtons > .idx-btn.highlighted {
+  background: white;
+}
+
 .carousel {
   display: flex;
   width: 100%;
@@ -51,4 +75,5 @@ body {
   min-width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 5%;
+  padding-bottom: 2rem;
 }

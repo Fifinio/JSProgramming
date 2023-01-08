@@ -1,0 +1,9 @@
+{
+    "numOfDots": 200,
+    "conntectDistance": 0.5,
+    "maxStartVelocity": 10,
+    "baseMass": 10,
+    "canvas": {
+        "backgroundColor": "black"
+    }
+}

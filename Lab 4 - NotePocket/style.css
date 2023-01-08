@@ -1,0 +1,123 @@
+body {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #404258;
+}
+
+#notes {
+  max-width: 80%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.note {
+  text-align: left;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #474e68;
+  border: 2px solid #50577a;
+  border-radius: 5px;
+}
+
+.note hr {
+  height: 4px;
+  border-radius: 20%;
+  background: #6b728e;
+  width: 100%;
+}
+/* modal stuff */
+
+dialog {
+  background: #404258;
+  border: none;
+  border-radius: 7px;
+  padding: 2rem;
+  color: white;
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+}
+dialog.close::backdrop {
+  animation: backdrop-fade 3s ease backwards;
+  animation-direction: reverse;
+}
+dialog[open] {
+  display: flex;
+}
+dialog[open]::backdrop {
+  animation: backdrop-fade 2s ease forwards;
+}
+#modal > * {
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+#modal > *:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+#modal > #title,
+#modal > #content {
+  background: #474e68;
+  border: 1px #50577a solid;
+  border-radius: 7px;
+  color: white;
+}
+
+.btn {
+  background: #6b728e;
+  border: 2px solid #50577a;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.btn:hover {
+  background: #50577a;
+}
+.btn-success {
+  background: #4caf50;
+  border-color: #4caf50;
+}
+.btn-success:hover {
+  background: #43a047;
+  border-color: #43a047;
+}
+.btn-danger {
+  background: #f44336;
+  border-color: #f44336;
+}
+.btn-danger:hover {
+  background: #e53935;
+  border-color: #e53935;
+}
+
+@keyframes backdrop-fade {
+  from {
+    background: transparent;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}

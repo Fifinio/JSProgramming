@@ -14,12 +14,21 @@ body {
   width: 100vw;
   height: 100vh;
 }
+#keyboardWrapper {
+  margin-top: 10%;
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .wrapper {
   display: flex;
-  justify-content: space-around;
-  background-color: rgba(255, 255, 255, 0.2);
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 2rem 0;
   padding: 1rem 20rem;
-  margin-top: 10%;
   box-shadow: 0 0 10rem rgba(0, 0, 0, 0.5);
 }
 kbd {
@@ -30,7 +39,7 @@ kbd {
     0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
   color: #333;
   display: inline-block;
-  font-size: 0.85em;
+  font-size: 1.2em;
   font-weight: 700;
   line-height: 1;
   padding: 2px 4px;
@@ -39,7 +48,38 @@ kbd {
 
 #keyboard {
   display: flex;
-  margin: 5rem auto;
+  margin: 1rem auto;
   justify-content: space-between;
   width: 20%;
+}
+#tracks {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+  margin: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: outline 200ms;
+}
+.track.active {
+  outline: 5px solid #000000;
+}
+.sounds-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+.sounds-container > kbd {
+  margin: 0 1rem;
+  height: 16px;
 }

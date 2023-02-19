@@ -9,14 +9,14 @@
     <title>Drumkit</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div id="keyboardWrapper">
       <h1>Available keys</h1>
       <div id="keyboard"></div>
     </div>
-    <div id="channels">
-      <div class="channel"></div>
+    <div class="wrapper">
+      <h2>Tracks</h2>
+      <div id="tracks"></div>
     </div>
-    <!-- create a list of audio tags with all the sounds in the sounds folder -->
     <audio src="sounds/boom.wav" id="boom"></audio>
     <audio src="sounds/clap.wav" id="clap"></audio>
     <audio src="sounds/hihat.wav" id="hihat"></audio>
@@ -27,7 +27,6 @@
     <audio src="sounds/tink.wav" id="tink"></audio>
     <audio src="sounds/tom.wav" id="tom"></audio>
 
-    <script src="sound.js"></script>
     <script src="track.js"></script>
     <script src="index.js"></script>
   </body>

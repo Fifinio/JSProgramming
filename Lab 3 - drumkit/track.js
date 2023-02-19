@@ -1,3 +1,12 @@
+class Sound { 
+    key;
+    timestamp;
+    constructor(key, timestamp){
+        this.key = key;
+        this.timestamp = timestamp;
+    }
+}
+
 class Track {
   name = "";
   sounds = [];
@@ -10,22 +19,14 @@ class Track {
     this.isRecording = true;
   }
 
+  stopRecording() {
+    this.isRecording = false;
+  }
+
   recordSound(recordingStartTime, e){
     if(this.isRecording){
       const sound = new Sound(e.key, new Date() - recordingStartTime)
       this.sounds.push(sound)
     }
-  }
-
-  stopRecording() {
-    this.isRecording = false;
-  }
-
-  play(){
-    this.sounds.forEach(sound => {
-      setTimeout(() => {
-        playSound(sound.key)
-      }, sound.timestamp)
-    })
   }
 }

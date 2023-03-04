@@ -1,3 +1,4 @@
 process.env
 *.env
 config.json
+CLIENT_SECRET.json

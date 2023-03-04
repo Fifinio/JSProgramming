@@ -1,0 +1,29 @@
+body {
+  margin: 4rem;
+}
+
+body > * {
+  max-width: 80%;
+  /* center all children */
+  margin: 0 auto;
+}
+
+.card-img-top {
+  width: 50px;
+  height: 50px;
+  margin: 1rem auto;
+}
+
+.card {
+  max-width: 300px;
+  margin: 1rem;
+}
+#add-button {
+  margin: 2rem 50%;
+  font-size: 1.5rem;
+}
+#cities-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
